@@ -15,3 +15,135 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+open gitbash in eclipse in local terminal
+git --> init add . config --global user.name "" user.email ""
+git branch -M main
+git remote set-url origin https://github.com/Kumbhambhargavi75/LMSWEBP.git
+git push -u origin main
+
+Discard unstaged local changes – 2M
+git checkout -- filename
+
+
+(or to discard all:)
+
+git checkout -- .
+
+2. Wrong commit message (not pushed yet) – 2M
+git commit --amend -m "Correct commit message"
+
+3. View commit history (readable format) – 2M
+git log --oneline --graph --decorate --all
+
+4. Create and switch to branch Feature/patient – 2M
+git checkout -b Feature/patient
+
+5. See all branches (local + remote) – 2M
+git branch -a
+
+6. Upload local commits to remote – 2M
+git push origin branch-name
+
+7. See all branches, merge with patient branch – 2M
+git branch -a        # view
+git checkout main
+git merge Feature/patient
+
+8. Pull latest changes from remote into local – 2M
+git pull origin branch-name
+
+9. First time push + set remote upstream – 2M
+git push -u origin branch-name
+
+10. Configure different remote repository – 3M
+git remote set-url origin https://github.com/your-username/NewRepo.git
+
+11. Local branch behind remote → update without losing changes – 3M
+git pull --rebase origin branch-name
+
+12. Delete branch from remote – 2M
+git push origin --delete branch-name
+
+13. Apply a .patch file and include in history – 3M
+git apply fix.patch
+git add .
+git commit -m "Applied teammate patch file"
+
+Q1. Start tracking your Campus Event Management System project in Git for the first time – 2M
+git init
+git add .
+git commit -m "Initial commit - Campus Event Management System"
+
+Q2. Save a snapshot of the current project with a message “Added event registration feature” – 2M
+git add .
+git commit -m "Added event registration feature"
+
+Q3. See the current status of modified and staged files – 2M
+git status
+
+Q4. View the commit history of your project – 2M
+git log --oneline --graph --decorate
+
+Q5. You cloned a repository but want to see all branches in it – 2M
+git branch -a
+
+Q6. Create a new feature branch called event-scheduler – 2M
+git checkout -b event-scheduler
+
+Q7. You received a .patch file fixing bugs in event notification module – 3M
+
+If patch file is named fix.patch:
+
+git apply fix.patch
+git add .
+git commit -m "Applied teammate’s patch for event notification bug fix"
+
+Q8. Create a new branch for online feedback functionality, make multiple commits, then merge into main – 3M
+git checkout -b online-feedback
+# (make some changes, then commit multiple times)
+git add .
+git commit -m "Added feedback form"
+git add .
+git commit -m "Improved feedback validation"
+# merge back into main
+git checkout main
+git merge online-feedback
+
+Q9. Encounter merge conflicts when merging event-scheduler with main – 3M
+git checkout main
+git merge event-scheduler
+# (resolve conflicts manually in files)
+git add .
+git commit -m "Resolved merge conflicts between event-scheduler and main"
+
+Q10. Collaborate using fork-and-pull request workflow – 3M
+
+Steps (not just one command):
+
+Fork the original repo on GitHub.
+
+Clone your fork:
+
+git clone https://github.com/your-username/CampusMgmtSystem.git
+
+
+Make changes in a new branch:
+
+git checkout -b new-feature
+git add .
+git commit -m "Implemented new feature"
+git push origin new-feature
+
+
+Open a Pull Request on GitHub.
+
+Q11. See changes present between your local branch and main on GitHub – 2M
+git fetch origin
+git diff main origin/main
+
+Q12. Teammate pushed a new branch event-feedback to GitHub. You want to test it locally – 2M
+git fetch origin
+git checkout event-feedback
+
+Q13. See the differences introduced by the last commit on your branch – 2M
+git show
