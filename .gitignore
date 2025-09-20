@@ -147,3 +147,39 @@ git checkout event-feedback
 
 Q13. See the differences introduced by the last commit on your branch – 2M
 git show
+
+Setup
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+Start a Project
+git init                  # start repo
+git clone <url>           # copy repo
+
+Save Changes
+git status                # check changes
+git add .                 # stage all
+git commit -m "message"   # save snapshot
+
+Branching
+git branch                # list branches
+git branch new-feature    # create branch
+git checkout new-feature  # switch branch
+git merge new-feature     # merge branch
+
+Undo/Restore
+git reset --hard HEAD~1   # undo last commit
+git revert <commit>       # safe undo (keeps history)
+git stash                 # save work temporarily
+git stash pop             # restore stashed work
+
+Remote Work
+git remote -v             # check remotes
+git push origin main      # push to GitHub
+git pull origin main      # pull updates
+Conflicts
+
+Edit files manually, then:
+
+git add <file>
+git commit -m "resolved conflict"
