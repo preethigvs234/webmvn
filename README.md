@@ -149,6 +149,26 @@ Regular backups should be conducted to ensure data can be recovered in case of a
 Sequence Diagram
 
 A sequence diagram illustrates the sequence of interactions between actors (users) and the system over time. Here's a simplified version for a Candidate Application Process:
+    +------------+      +------------+      +--------------+      +---------------+
+    | Candidate  |      | Recruitment|      | HR System    |      | Hiring Manager|
+    +------------+      +------------+      +--------------+      +---------------+
+        |                   |                    |                    |
+        |--- Apply Job --->|                    |                    |
+        |                   |-- Submit Resume-->|                    |
+        |                   |                    |--- Parse Resume-->|
+        |                   |                    |<-- Display Results--|
+        |                   |                    |--- Rank Candidates---|
+        |                   |                    |<--- Show Ranking---|
+        |                   |                    |-- Notify HR---|      
+        |                   |                    |--- Send Interview Request--->|
+        |                   |                    |<--- Confirm Interview---|
+        |<--- Receive Interview Notification---|                    |
+        |--- Attend Interview -->|                |                    |
+        |                   |                    |                    |--- Provide Feedback --->|
+        |                   |                    |<--- Receive Feedback ---|
+        |--- Receive Offer --->|                 |                    |
+        |                   |                    |                    |
+    +------------+      +------------+      +--------------+      +---------------+
 
     +------------+      +------------+      +--------------+      +---------------+
     | Candidate  |      | Recruitment|      | HR System    |      | Hiring Manager|
